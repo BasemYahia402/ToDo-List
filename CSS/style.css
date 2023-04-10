@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main_color: #198754;
+    --second_color: white;
+}
+
+body {
+    background-color: var(--main_color);
+}
+.to_do{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.plans {
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--second_color);
+}
+    
+.plans input {
+    padding-left: 5px;
+    border: 3px solid var(--main_color);
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn {
+    padding: 2px 10px;
+    margin-bottom: 3px;
+}
+
+.tasks {
+    min-height: 50px;
+    margin-top: 10px;
+}
+
+@media(max-width:768px) {
+    .tasks {
+        min-height: 0;
+    }
+}
+
+.task {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: var(--main_color);
+    color: white;
+    cursor: move;
+}
+
+.task p {
+    width: 200px;
+    margin: 0;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.task .actions {
+    display: flex;
+    text-align: right;
+}
+
+.task .edit, .trash {
+    width: 100%;
+    height: 100%;
+}
